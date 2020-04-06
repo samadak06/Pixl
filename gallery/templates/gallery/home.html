@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pixl - Home</title>
+</head>
+<body>
+    {% for photo in photos%}
+        <div>
+            <h3>{{ photo.caption }}</h3>
+            <h4>{{ photo.date_posted|date:"F d, Y" }}</h4>
+            <img src="{{ photo.image.url }}">
+        </div>
+    {% endfor %}
+</body>
+</html>
